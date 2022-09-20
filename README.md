@@ -2,3 +2,6 @@
 
 ## 0x00. Project
 Python - Hello, World
+
+## 0x01. Project
+Python - if/else, loops, functions
