@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name__ == main:
     from calculator_1 import add, sub, mul, div
-
+    """function prints result of deveral arithmetic operations"""
     a = 10
     b = 5
 
