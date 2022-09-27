@@ -8,3 +8,6 @@ Python - if/else, loops, functions
 
 ## 0x02. Project
 Python - import & modules
+
+## 0x03. Project
+Python - Data Structures: Lists, Tuples
