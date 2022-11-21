@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def max_integer(my_list=[]):
-""" return biggest int in a list """
+    """ return biggest int in a list """
     maxVal = my_list[0]
     if len(my_list) == 0:
       	return None
