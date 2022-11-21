@@ -2,9 +2,13 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     new_tuple = ()
     for i in  range(2):
-        if tuple_a[i] < 0 or tuple_a[i] == ' ':
-            tuple_a[i] = 0
-        if tuple_b[i] < 0 or tuple_b[i] == ' ':
-            tuple_b[i] = 0
-        new_tuple[i] = tuple_a[i] + tuple_b[i]
+        if len(tuple_a) < 1:
+            tuple_a = (0, 0)
+        elif len(tuple_a) < 2:
+            tuple_a = (tuple_a[0], 0)
+        if len(tuple_b) < 1:
+            tuple_b = (0, 0)
+        elif len(tuple_b) < 2:
+            tuple_b = (tuple_b[0], 0)
+        new_tuple = tuple_a[i] + tuple_b[i]
     return (new_tuple)
