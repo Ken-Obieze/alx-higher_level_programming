@@ -7,4 +7,4 @@ def divisible_by_2(my_list=[]):
             evenCheck.append(True)
         else:
             evenCheck.append(False)
-        return evenCheck
+    return evenCheck
