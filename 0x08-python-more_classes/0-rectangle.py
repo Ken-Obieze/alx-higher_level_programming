@@ -1,5 +1,6 @@
 #!/usr/bin/python3
+""" defines rectangle class """
 
 class Rectangle:
-    """ defines rectangle class"""
+    """ represents rectangle"""
     pass
