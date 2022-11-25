@@ -38,7 +38,7 @@ class Square:
         """ prints square with character '#'"""
         for i in range(0, self.__size):
             for j in range(self.__size):
-                print("#",end="")
+                print("#", end="")
             print('')
         if self.__size == 0:
             print('')
