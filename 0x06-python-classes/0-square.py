@@ -4,6 +4,4 @@
 
 class Square:
     """ implements square module """
-
-
     pass
