@@ -18,8 +18,8 @@ class MagicClass:
         self.__radius = radius
 
     def area(self)
-    """ Retuen area of Magic Class"""
-        return (math.pi * self,__radius ** 2)
+        """ Retuen area of Magic Class"""
+        return (math.pi * self.__radius ** 2)
 
     def circumference(self)
         """ Return circumference of magicClass"""
