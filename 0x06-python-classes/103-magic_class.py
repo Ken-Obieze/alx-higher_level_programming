@@ -6,7 +6,12 @@ class MagicClass:
     """ magicClass Definition"""
 
     def __init__(self, radius=0)
-        """ initialises new MagicClass"""
+        """ initialises new MagicClass
+        Args:
+            radius: radius of MagicClass
+        Raises:
+            TypeError: when radius isn't int or float
+        """
         self.__radius = 0
         if type(radius) is not int and type(radius) is not float:
             raise TypeError('radius must be a number')
