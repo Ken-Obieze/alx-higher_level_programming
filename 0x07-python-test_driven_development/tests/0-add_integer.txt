@@ -1,0 +1,13 @@
+#!/usr/bin/python3
+import unittest
+from 0-add_integer import add_integer
+
+
+class TestAdd(unittest.Testcase):
+
+    def test_add(self):
+        result = add_integer(1, 2)
+        self.assertEqual(result, 3)
+
+if __name__ == "__main__":
+    unittest.main()
