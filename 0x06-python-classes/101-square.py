@@ -69,7 +69,7 @@ class Square:
         """ prints square with character '#'"""
         if self.size == 0:
             print('')
-            return
+            return ("")
 
         for i in range(0, self.__position[1]):
             print("")
