@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """ Unittest Module"""
 import unittest
+import sys
+from importlib import import_module
 
 
-class TestAdd(unittest.Testcase):
+class TestAdd(unittest.TestCase):
     """ Test case implementation"""
     def test_add(self):
         """ test conditions"""
-        add_integer = __import__('0-add_integer').add_integer
+        add_integer = import_module('0-add_integer').add_integer
         self.assertEqual(add_integer(1, 2), 3)
         self.assertEqual(add_integer(100, -2), 98)
         self.assertEqual(add_integer(2), 100)

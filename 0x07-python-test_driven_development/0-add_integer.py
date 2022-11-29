@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+""" Add integer module"""
+
 
 def add_integer(a, b = 98):
+    """ implements add_integer function"""
+
     if (type(a) != int or type(b) != int and 
             type(a) != float or type(b) != float):
         if (type(a) != int):
