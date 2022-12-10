@@ -1,17 +1,4 @@
 #!/usr/bin/python3
-"""Defines unittests for models/rectangle.py.
-Unittest classes:
-    TestRectangle_instantiation - line 25
-    TestRectangle_width - line 114
-    TestRectangle_height - line 190
-    TestRectangle_x - line 262
-    TestRectangle_y - line 334
-    TestRectangle_order_of_initialization - line 402
-    TestRectangle_area - line 430
-    TestRectangle_update_args - line 538
-    TestRectangle_update_kwargs - line 676
-    TestRectangle_to_dictionary - line 788
-"""
 import io
 import sys
 import unittest
@@ -19,8 +6,8 @@ from models.base import Base
 from models.rectangle import Rectangle
 
 
-class TestRectangle_instantiation(unittest.TestCase):
-    """Unittests for testing instantiation of the Rectangle class."""
+class TestRectangle_instance(unittest.TestCase):
+    """Unittests for instance of the Rectangle class."""
 
     def test_rectangle_is_base(self):
         self.assertIsInstance(Rectangle(10, 2), Base)
@@ -121,11 +108,11 @@ class TestRectangle_width(unittest.TestCase):
 
     def test_float_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(5.5, 1)
+            Rectangle(2.5, 1)
 
     def test_complex_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(complex(5), 2)
+            Rectangle(complex(4), 2)
 
     def test_dict_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -137,31 +124,31 @@ class TestRectangle_width(unittest.TestCase):
 
     def test_list_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle([1, 2, 3], 2)
+            Rectangle([1, 2, 6], 2)
 
     def test_set_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle({1, 2, 3}, 2)
+            Rectangle({1, 4, 3}, 2)
 
     def test_tuple_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle((1, 2, 3), 2)
+            Rectangle((1, 5, 3), 2)
 
     def test_frozenset_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(frozenset({1, 2, 3, 1}), 2)
+            Rectangle(frozenset({4, 2, 3, 1}), 2)
 
     def test_range_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(range(5), 2)
+            Rectangle(range(8), 2)
 
     def test_bytes_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(b'Python', 2)
+            Rectangle(b'Pydun', 2)
 
     def test_bytearray_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(bytearray(b'abcdefg'), 2)
+            Rectangle(bytearray(b'wwejg'), 2)
 
     def test_memoryview_width(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
