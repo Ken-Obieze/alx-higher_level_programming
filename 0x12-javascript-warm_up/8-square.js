@@ -2,9 +2,11 @@
 const x = parseInt(process.argv[2]);
 if (!isNaN(parseInt(process.argv[2]))) {
   for (let i = 0; i < x; i++) {
+    let output = '';
     for (let j = 0; j < x; j++) {
-      console.log('X');
+      output += 'X';
     }
+    console.log(output);
   }
 } else {
   console.log('Missing size');
