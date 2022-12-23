@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-""" 
-Module for selecting states in database
-"""
+"""Module for selecting states in database."""
 
 import MySQLdb
 from sys import argv

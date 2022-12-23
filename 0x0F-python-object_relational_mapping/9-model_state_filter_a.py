@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-""" Module lists all states that contains leter 'a' using SQLAlchemy"""
-
+"""Module lists all states that contains leter 'a' using SQLAlchemy."""
 
 from sys import argv
 from model_state import Base, State

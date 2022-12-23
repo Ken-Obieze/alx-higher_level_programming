@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module lists all states using SQLAlchemy """
+"""Module lists all states using SQLAlchemy."""
 
 from sys import argv
 from sqlalchemy import create_engine

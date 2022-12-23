@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module for filtering states starting with N """
+"""Module for filtering states starting with N."""
 
 import MySQLdb
 from sys import argv

@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module changes the name of a State object from the database"""
+"""Module changes the name of a State object from the database."""
 
 
 from sys import argv

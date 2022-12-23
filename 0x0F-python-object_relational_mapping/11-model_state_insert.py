@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module State object “Louisiana” to the database  SQLAlchemy"""
+"""Module State object “Louisiana” to the database  SQLAlchemy."""
 
 from sys import argv
 from model_state import Base, State

@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-Module that lists all State objects from the database
-"""
+"""Module that lists all State objects from the database."""
 
 from sys import argv
 from sqlalchemy import create_engine

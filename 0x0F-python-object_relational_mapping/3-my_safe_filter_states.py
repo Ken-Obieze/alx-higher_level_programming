@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module that displays all values in state matching an argument"""
+"""Module that displays all values in state matching an argument."""
 
 import MySQLdb
 import sys

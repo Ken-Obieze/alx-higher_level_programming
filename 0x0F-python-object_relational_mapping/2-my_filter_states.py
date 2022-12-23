@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module to return a sorted list of state safe from sql injection """ 
+"""Module to return a sorted list of state safe from sql injection.""" 
 
 import MySQLdb
 import sys

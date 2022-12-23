@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module selects all states from database using SQLAlchemy"""
+"""Module selects all states from database using SQLAlchemy."""
 
 from sys import argv
 from sqlalchemy import create_engine

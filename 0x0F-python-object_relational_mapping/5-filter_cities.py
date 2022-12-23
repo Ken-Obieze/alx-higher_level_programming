@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Module lists all cities from the database """
+"""Module lists all cities from the database."""
 
 import MySQLdb
 from sys import argv
