@@ -2,7 +2,7 @@
 """Fetches https://alx-intranet.hbtn.io/status.
 
 Usage: ./4-hbtn_status.py | cat -e
-""" 
+"""
 import requests
 
 
