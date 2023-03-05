@@ -5,5 +5,5 @@ def search_replace(my_list, search, replace):
     for i in new_list:
         if i is search:
             new_list[j] = replace
-        j++
+        j += 1
     return (new_list)
