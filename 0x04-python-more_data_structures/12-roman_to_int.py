@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     int_coversion = 0
     roman_list = list(roman_string)
     for i, c  in enumerate(roman_list):
-        if (i+1) == len(num) or roman_dict[c] >= roman_dict[roman_list[i+1]]::
+        if (i+1) == len(roman_string) or roman_dict[c] >= roman_dict[roman_list[i+1]]::
             int_conversion += roman_dict[c]
         else:
             int_conversion -= roman_dict[c]
