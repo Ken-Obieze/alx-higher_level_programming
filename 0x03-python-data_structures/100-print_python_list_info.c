@@ -10,7 +10,6 @@ void print_python_list_info(PyObject *p)
 	int allocated, i, pl_size;
 	PyObject *item;
 	const char *i_type;
-	PyListObject *list_object_cast;
 
 	allocated  =  ((PyListObject *)p)->allocated;
 	pl_size = Py_SIZE(p);
