@@ -39,7 +39,7 @@ int is_palindrome(listint_t **head)
 	len = count_listint(temp);
 	nArr = (int *)malloc(sizeof(int) * len);
 	if (nArr == NULL)
-		return (2);
+		return (1);
 	temp = *head;
 	while (temp != NULL)
 	{
