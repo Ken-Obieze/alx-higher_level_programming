@@ -11,4 +11,4 @@ class myInt(int):
 
     def __ne__(self, num):
         """Override not-equal and inverts it."""
-        return .real == num
+        return self.real == num

@@ -9,7 +9,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Intialize a new Square.
-        
+
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
