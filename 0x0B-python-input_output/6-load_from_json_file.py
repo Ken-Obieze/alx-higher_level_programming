@@ -7,5 +7,5 @@ import json
 
 def load_from_json_file(filename):
     """creates method"""
-    with ope(filename) as f:
-        return json.load(f)
+    with open(filename) as jf:
+        return json.load(jf)

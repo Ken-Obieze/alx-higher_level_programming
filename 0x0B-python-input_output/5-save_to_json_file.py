@@ -9,5 +9,5 @@ def save_to_json_file(my_obj, filename):
     """
     method/module for writing obj to text
     """
-    j = json.dump(my_obj, filename)
-    return (j)
+    with open(filename, "w") as jf:
+        json.dump(my_obj, jf)
