@@ -3,7 +3,14 @@
 
 
 class myInt(int):
-    """Invert int operator that inherits from int."""
+    """
+        Invert int operator that inherits from int.
+        Args:
+            value (int): value to be compared
+    """
+
+    def __init__(self, value):
+        self.value = value
 
     def __eq__(self, value):
         """Override equal and inverts it."""
