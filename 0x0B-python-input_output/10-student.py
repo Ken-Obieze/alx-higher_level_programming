@@ -3,12 +3,7 @@
 
 
 class Student:
-    """
-        A defines a student.
-        Methods:
-            __init__ - initializes the Student instance.
-            to_json - retrieves dictionary repr of Student instance.
-    """
+    """A defines a student."""
 
     def __init__(self, first_name, last_name, age):
         """
