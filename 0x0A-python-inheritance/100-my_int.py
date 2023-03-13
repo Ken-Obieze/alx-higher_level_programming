@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module define a class MyInt that inherits from int."""
+"""Module define  a class MyInt that inherits from int."""
 
 
 class myInt(int):
@@ -7,8 +7,8 @@ class myInt(int):
 
     def __eq__(self, value):
         """Override equal and inverts it."""
-        return self.real != value
+        return not self.__eq__(value)
 
     def __ne__(self, value):
         """Override not-equal and inverts it."""
-        return self.real == value
+        return not self.__ne__(value)
