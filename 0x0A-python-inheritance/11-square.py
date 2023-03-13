@@ -10,8 +10,7 @@ class Square(Rectangle):
         """Intialize a new Square.
 
         Args:
-            width (int): The width of the new Rectangle.
-            height (int): The height of the new Rectangle.
+            size (int): The size of the new square.
         """
         super().integer_validator("size", size)
         super().__init__(size, size)
@@ -23,5 +22,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return string rerpresentation of instance."""
-        return "[{}] {}/{}".format(type(self).__name, self.__size,
+        return "[{}] {}/{}".format(type(self).__size, self.__size,
                                    self.__size)
