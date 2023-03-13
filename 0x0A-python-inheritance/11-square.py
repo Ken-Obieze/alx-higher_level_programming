@@ -8,7 +8,7 @@ class Square(Rectangle):
 
     def __init__(self, size):
         """Intialize a new Square.
-        
+
         Args:
             width (int): The width of the new Rectangle.
             height (int): The height of the new Rectangle.
@@ -23,4 +23,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return string rerpresentation of instance."""
-        return f"[{type(self).name}] {self.__size}/{self.__size}"
+        return "[{}] {}/{}".format(type(self).__name, self.__size,
+                                   self.__size)
