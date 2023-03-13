@@ -7,7 +7,7 @@ import json
 
 def from_json_string(my_str):
     """
-    module for decoding JSON
+    module for decoding JSON.
     """
-    js = json.load(my_str)
+    js = json.loads(my_str)
     return (js)
