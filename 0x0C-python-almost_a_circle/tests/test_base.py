@@ -36,7 +36,7 @@ class TestBase_instatntiotion(unittest.TestCase):
 
 
 class TestBase_to_json(unittest.TestCase):
-    """test for json string."""
+    """test to create json string."""
 
     def test_base_to_json_none(self):
         self.assertEqual(Base.to_json_string(None), "[]")
@@ -71,6 +71,56 @@ class TestBase_to_json(unittest.TestCase):
         d = [{}, {}]
         self.assertEqual(Base.to_json_string(d),
                          '[{}, {}]')
+
+
+class TestBase_from_json(unittest.TestCase):
+    """ test to read from json file."""
+
+    def test_from_json_none(self):
+        self.assertEqual(Base.from_json_string(None), [])
+    def test_from_json_empty(self):
+        self.assertEqual(Base.from_json_string("[}"), [])
+    def test_from_json_specific_records(self):
+        s = '[{"x": 1, "y": 2, "width": 3, "id": 4, "height": 5}, \
+{"x": 101, "y": 123, "width": 321, "id": 512, "height": 122}]'
+        d = [{'x': 1, 'y': 2, 'width': 3, 'id': 4, 'height': 5},
+             {'x': 101, 'y': 123, 'width': 321, 'id': 52,
+             'height': 122}]
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{}, {}]
+        s = '[{}, {}]'
+        self.assertEqual(Base.from_json_string(s), d)
+        d = [{}]
+        s = '[{}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{"froth": 98}, {"abc": 123}, {"HI": 0}]
+        s = '[{"froth": 98}, {"abc": 123}, {"HI": 0}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{"froth": 98}]
+        s = '[{"froth": 98}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{'x': 1, 'y': 2, 'width': 3, 'id': 4, 'height': 5}]
+        s = '[{"x": 1, "y": 2, "width": 3, "id": 4, "height": 5}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{'x': 101, 'y': 123, 'width': 321, 'id': 543,
+             'height': 321}]
+        s = '[{"x": 101, "y": 123, "width": 321, "id": 543, \
+"height": 321}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        list_in = [
+            {'id': 89, 'width': 8, 'height': 9},
+            {'id': 7, 'width': 7, 'height': 7}
+        ]
+        list_out = Rectangle.from_json_string(
+            Rectangle.to_json_string(list_in))
+        self.assertEqual(list_in, list_out)
+
 
 
 if __name__ == "__main__":
