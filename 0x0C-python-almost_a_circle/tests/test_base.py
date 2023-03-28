@@ -26,7 +26,13 @@ class TestBase_instatntiotion(unittest.TestCase):
         self.assertEqual(t1.id, t2.id -1)
         self.assertEqual(t3.id - 1, t2.id)
 
+    def test_unique_id(self):
+        self.assertEqual(Base(89).id, 89)
 
+    def test_id_update(self):
+        t1 = Base(16)
+        t1.id = 89
+        self.assertEqual(t1.id, 89)
 
 
 if __name__ == "__main__":
