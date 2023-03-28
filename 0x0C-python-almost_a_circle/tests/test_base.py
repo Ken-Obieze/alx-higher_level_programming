@@ -80,7 +80,48 @@ class TestBase_from_json(unittest.TestCase):
         self.assertEqual(Base.from_json_string(None), [])
 
     def test_from_json_empty(self):
-        self.assertEqual(Base.from_json_string("[}"), [])
+        self.assertEqual(Base.from_json_string("[]"), [])
+
+    def test_from_json_specific_records(self):
+        s = '[{"x": 1, "y": 2, "width": 3, "id": 4, "height": 5}, \
+{"x": 101, "y": 123, "width": 321, "id": 54, "height": 34}]'
+        d = [{'x': 1, 'y': 2, 'width': 3, 'id': 4, 'height': 5},
+             {'x': 101, 'y': 123, 'width': 321, 'id': 54,
+             'height': 34}]
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{}, {}]
+        s = '[{}, {}]'
+        self.assertEqual(Base.from_json_string(s), d)
+        d = [{}]
+        s = '[{}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{"froth": 98}, {"abc": 123}, {"HI": 0}]
+        s = '[{"froth": 98}, {"abc": 123}, {"HI": 0}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{"froth": 98}]
+        s = '[{"froth": 98}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{'x': 1, 'y': 2, 'width': 3, 'id': 4, 'height': 5}]
+        s = '[{"x": 1, "y": 2, "width": 3, "id": 4, "height": 5}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        d = [{'x': 101, 'y': 123, 'width': 321, 'id': 54,
+             'height': 34}]
+        s = '[{"x": 101, "y": 123, "width": 321, "id": 54, \
+"height": 34}]'
+        self.assertEqual(Base.from_json_string(s), d)
+
+        list_in = [
+            {'id': 89, 'width': 8, 'height': 9},
+            {'id': 7, 'width': 7, 'height': 7}
+        ]
+        list_out = Rectangle.from_json_string(
+            Rectangle.to_json_string(list_in))
+        self.assertEqual(list_in, list_out)
 
 if __name__ == "__main__":
     unittest.main()
