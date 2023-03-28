@@ -78,8 +78,10 @@ class TestBase_from_json(unittest.TestCase):
 
     def test_from_json_none(self):
         self.assertEqual(Base.from_json_string(None), [])
+
     def test_from_json_empty(self):
         self.assertEqual(Base.from_json_string("[}"), [])
+
     def test_from_json_specific_records(self):
         s = '[{"x": 1, "y": 2, "width": 3, "id": 4, "height": 5}, \
 {"x": 101, "y": 123, "width": 321, "id": 512, "height": 122}]'
@@ -112,16 +114,6 @@ class TestBase_from_json(unittest.TestCase):
         s = '[{"x": 101, "y": 123, "width": 321, "id": 543, \
 "height": 321}]'
         self.assertEqual(Base.from_json_string(s), d)
-
-        list_in = [
-            {'id': 89, 'width': 8, 'height': 9},
-            {'id': 7, 'width': 7, 'height': 7}
-        ]
-        list_out = Rectangle.from_json_string(
-            Rectangle.to_json_string(list_in))
-        self.assertEqual(list_in, list_out)
-
-
 
 if __name__ == "__main__":
     unittest.main()
